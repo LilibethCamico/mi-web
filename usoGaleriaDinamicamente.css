@@ -1,0 +1,100 @@
+body{
+	color: #222;
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+/*
+Ejemplo para cargar varias imagenes de forma dinamica
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.resultado {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 100px;
+    grid-gap: 6px;
+}
+
+img:first-child {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+}
+
+img:first-child {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+}
+
+img:nth-child(6) {
+	grid-column: 2 / 4;
+	grid-row: 3 / 5;
+	
+}
+
+img:nth-child(10) {
+	grid-row: span 2;
+	
+}
+//codigo html
+<input type="file" id="archivo" multiple>
+    <div class="resultado"></div>
+*/
+
+/*combinacion de una galeria dinamica con Drag & Drog*/
+.zona-arrastre, .barra-de-carga{
+	padding: 60px 20px;
+	border: 4px dashed #888;
+	max-width: 500px;
+	color: #888;
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	z-index: 10;
+}
+
+.barra-de-carga {
+	position: absolute;
+	width: 0;
+	left: 0;
+	right: 0;
+	margin-top: 0;
+	padding: 0px;
+	z-index: 0;
+	border: none;
+	background: #def;
+	/*para carga lenta,ya que por defecto es rapida*/
+	transition: width 0.3s, background 0.5s;
+}
+
+.resultado {
+	text-align: center;
+	padding: 20px;
+}
+
+/*img {
+	width: 400px;
+	margin: auto;
+}*/
+
+video {
+	width: 300px;
+	margin: auto;
+}
+
+@keyframes aparecer{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
